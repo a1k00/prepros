@@ -1,0 +1,90 @@
+*{
+  overflow-x:hidden;
+}
+.like{
+   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border:10px solid silver;
+}
+$col:white;
+$space:30px;
+.pop{
+  height: 100vh;
+  width: 100%;
+  background: #C3A785;
+  text-align: center;
+
+  h2{
+  color:$col;
+  font-size:100px;
+  font-weight: 900;
+  }
+  p{
+  color:$col;
+  font-size:100px;
+  }
+  button{
+    color:$col;
+    background:#C3A785;
+    font-size: 50px;
+    border:4px solid #947E68;
+    box-shadow: 10px 10px 5px white;
+
+  }
+  &:hover{
+    background: #B8A189;
+  }
+}
+
+
+
+
+/*sike*/
+//hopa
+
+.toca{
+  @extend .like;
+ 
+  a{
+    color:#61544B;
+    text-decoration: none;
+    font-size: $space;
+    font-weight: 900;
+  }
+}
+.nice{
+@extend .like;
+border:5px solid green;
+
+}
+
+
+.parinte{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap:10px;
+  .sos{
+  background:#685F5F;
+  height:200px;
+  width:200px;
+  border:1px solid black;
+}
+}
+
+@media(max-width:1000px) {
+  .parinte{
+     display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap:10px;
+   
+   .sos{
+    background:black;
+    &:nth-child(even){
+    border-radius: 50%;
+    }
+   }
+
+  }
+
+}
